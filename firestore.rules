@@ -1,0 +1,13 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Phase 1: deny all client database access by default.
+    // Add narrowly-scoped tenant membership and field-validation rules
+    // alongside each module, then cover them with emulator security tests.
+    // Cloud Functions using Admin SDK must perform their own authorization.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

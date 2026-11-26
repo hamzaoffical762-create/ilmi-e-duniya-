@@ -1,0 +1,11 @@
+rules_version = '2';
+
+service firebase.storage {
+  match /b/{bucket}/o {
+    // Phase 1: deny all client storage access until tenant-scoped paths,
+    // membership checks, file size limits and content-type validation are added.
+    match /{allPaths=**} {
+      allow read, write: if false;
+    }
+  }
+}
