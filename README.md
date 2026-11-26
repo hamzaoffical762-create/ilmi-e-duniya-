@@ -92,3 +92,4 @@ The included `frontend/vercel.json` provides SPA route fallback.
 This is a Phase 1 starter foundation, not a production-ready school system yet.
 Authentication screens, tenant onboarding, billing, role permissions, and offline
 write-queue behavior are planned for later phases.
+"# taleemi-duniya-pro" 
